@@ -15,7 +15,7 @@ public class Main {
         System.out.println("Можете да кажете само " + maxGuesses + " грешни букви, преди да загубите.");
 
         while (wrongGuesses < maxGuesses) {
-
+            System.out.println("Дума: " + getWordWithDashes(word, guessedLetters));
 
             System.out.print("Въведете буква: ");
             String letter = scanner.nextLine();
@@ -31,6 +31,7 @@ public class Main {
                 System.out.println("Вече сте опитали тази буква. Опитайте отново.");
                 continue;
             }
+
             guessedLetters.append(guessedLetter);
 
             if (word.contains(letter)) {
@@ -38,12 +39,20 @@ public class Main {
             } else {
                 System.out.println("Грешен отговор!");
                 wrongGuesses++;
-
+                drawHangman(wrongGuesses);
             }
 
+            if (isWordGuessed(word, guessedLetters)) {
                 System.out.println("Честито! Познахте думата: " + word);
                 break;
             }
 
+            System.out.println("Имате още " + (maxGuesses - wrongGuesses) + " грешни опитвания.");
+        }
+
+        if (wrongGuesses >= maxGuesses) {
+            System.out.println("Край на играта! Достигнахте максималния брой грешни опитвания.");
+            System.out.println("Думата беше: " + word);
         }
     }
+}
