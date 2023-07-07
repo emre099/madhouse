@@ -31,7 +31,19 @@ public class Main {
                 System.out.println("Вече сте опитали тази буква. Опитайте отново.");
                 continue;
             }
+            guessedLetters.append(guessedLetter);
+
+            if (word.contains(letter)) {
+                System.out.println("Верен отговор!");
+            } else {
+                System.out.println("Грешен отговор!");
+                wrongGuesses++;
+
+            }
+
+                System.out.println("Честито! Познахте думата: " + word);
+                break;
+            }
 
         }
     }
-}
