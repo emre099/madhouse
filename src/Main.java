@@ -71,11 +71,27 @@ public class Main {
             return result.toString();
         }
     public static boolean isWordGuessed(String word, StringBuilder guessedLetters) {
-    return true;
+        for (int i = 0; i < word.length(); i++) {
+            char letter = word.charAt(i);
+
+            if (!guessedLetters.toString().contains(Character.toString(letter))) {
+                return false;
+            }
+        }
+        return true;
     }
 
         public static void drawHangman(int wrongGuesses){
         switch (wrongGuesses) {
+            case 1:
+            System.out.println("  ______");
+            System.out.println(" |      |");
+            System.out.println(" |      O");
+            System.out.println(" |");
+            System.out.println(" |");
+            System.out.println("_|_");
+            break;
+
         }
     }
 }
