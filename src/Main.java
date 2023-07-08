@@ -91,6 +91,30 @@ public class Main {
             System.out.println(" |");
             System.out.println("_|_");
             break;
+            case 2:
+                System.out.println("  ______");
+                System.out.println(" |      |");
+                System.out.println(" |      O");
+                System.out.println(" |      |");
+                System.out.println(" |");
+                System.out.println("_|_");
+                break;
+            case 3:
+                System.out.println("  ______");
+                System.out.println(" |      |");
+                System.out.println(" |      O");
+                System.out.println(" |     /|");
+                System.out.println(" |");
+                System.out.println("_|_");
+                break;
+            case 4:
+                System.out.println("  ______");
+                System.out.println(" |      |");
+                System.out.println(" |      O");
+                System.out.println(" |     /|\\");
+                System.out.println(" |");
+                System.out.println("_|_");
+                break;
 
         }
     }
