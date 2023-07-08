@@ -11,7 +11,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Нека да започнем с играта Бесеница!");
-        System.out.println("Трябва да познаите думата, като въвеждате по една буква всеки път.");
+        System.out.println("Трябва да познаете думата, като въвеждате по една буква всеки път.");
         System.out.println("Можете да кажете само " + maxGuesses + " грешни букви, преди да загубите.");
 
         while (wrongGuesses < maxGuesses) {
@@ -21,7 +21,7 @@ public class Main {
             String letter = scanner.nextLine();
 
             if (letter.length() != 1) {
-                System.out.println("Невалиден вход. Моля, въведете една буква.");
+                System.out.println("Не можете да въвеждате две букви. Моля, въведете една буква.");
                 continue;
             }
 
@@ -80,42 +80,64 @@ public class Main {
         }
         return true;
     }
-
-        public static void drawHangman(int wrongGuesses){
+    public static void drawHangman(int wrongGuesses){
         switch (wrongGuesses) {
-            case 1:
-            System.out.println("  ______");
-            System.out.println(" |      |");
-            System.out.println(" |      O");
-            System.out.println(" |");
-            System.out.println(" |");
-            System.out.println("_|_");
-            break;
-            case 2:
+            case 1 -> {
+                System.out.println("  ______");
+                System.out.println(" |      |");
+                System.out.println(" |      O");
+                System.out.println(" |");
+                System.out.println(" |");
+                System.out.println("_|_");
+            }
+            case 2 -> {
                 System.out.println("  ______");
                 System.out.println(" |      |");
                 System.out.println(" |      O");
                 System.out.println(" |      |");
                 System.out.println(" |");
                 System.out.println("_|_");
-                break;
-            case 3:
+            }
+            case 3 -> {
                 System.out.println("  ______");
                 System.out.println(" |      |");
                 System.out.println(" |      O");
                 System.out.println(" |     /|");
                 System.out.println(" |");
                 System.out.println("_|_");
-                break;
-            case 4:
+            }
+            case 4 -> {
                 System.out.println("  ______");
                 System.out.println(" |      |");
                 System.out.println(" |      O");
                 System.out.println(" |     /|\\");
                 System.out.println(" |");
                 System.out.println("_|_");
-                break;
-
+            }
+            case 5 -> {
+                System.out.println("  ______");
+                System.out.println(" |      |");
+                System.out.println(" |      O");
+                System.out.println(" |     /|\\");
+                System.out.println(" |     /");
+                System.out.println("_|_");
+            }
+            case 6 -> {
+                System.out.println("  ______");
+                System.out.println(" |      |");
+                System.out.println(" |      O");
+                System.out.println(" |     /|\\");
+                System.out.println(" |     / \\");
+                System.out.println("_|_");
+            }
+            case 7 -> {
+                System.out.println("  ______");
+                System.out.println(" |      |");
+                System.out.println(" |      X");
+                System.out.println(" |     /|\\");
+                System.out.println(" |     / \\");
+                System.out.println("_|_");
+            }
         }
     }
 }
