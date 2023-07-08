@@ -55,4 +55,27 @@ public class Main {
             System.out.println("Думата беше: " + word);
         }
     }
+        public static String getWordWithDashes(String word, StringBuilder guessedLetters) {
+            StringBuilder result = new StringBuilder();
+
+            for (int i = 0; i < word.length(); i++) {
+                char letter = word.charAt(i);
+
+                if (guessedLetters.toString().contains(Character.toString(letter))) {
+                    result.append(letter);
+                } else {
+                    result.append("-");
+                }
+            }
+
+            return result.toString();
+        }
+    public static boolean isWordGuessed(String word, StringBuilder guessedLetters) {
+
+    }
+
+        public static void drawHangman(int wrongGuesses){
+        switch (wrongGuesses) {
+        }
+    }
 }
