@@ -71,7 +71,7 @@ public class Main {
             return result.toString();
         }
     public static boolean isWordGuessed(String word, StringBuilder guessedLetters) {
-
+    return true;
     }
 
         public static void drawHangman(int wrongGuesses){
